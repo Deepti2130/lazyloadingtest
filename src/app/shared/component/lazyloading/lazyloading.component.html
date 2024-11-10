@@ -1,0 +1,32 @@
+<header>
+  <h3 class="text-center mt-4">World Country Data</h3>
+</header>
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-md-3 mb-4" *ngFor="let img of imgData">
+      <div class="country">
+      <figure class="countrycard p-4">
+        <img class="countryImg"
+        [lazySrc]="img.flag"
+       alt="flag" title="flag" loading="lazy" [placeholder]="'https://placehold.co/300x200'"
+        appLazyloading
+        >
+
+      <figcaption>
+      <div class="countryinfo p-2">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="countryname text-center">{{img.name}}</h3>
+            <p class="mb-0"><b>Capital</b>:{{img.capital}}</p>
+            <p class="mb-0"><b>Language</b>:{{img.languages}}</p>
+            <p class="mb-0"><b>Population</b>:{{img.population}}</p>
+          </div>
+        </div>
+      </div>
+      </figcaption>
+
+      </figure>
+      </div>
+    </div>
+  </div>
+</div>
